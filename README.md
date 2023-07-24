@@ -1,1 +1,11 @@
-# Compilers-Lab01
+# Construcción de Compiladores - Laboratorio 1
+## Dependencias:
+- graphviz
+- librería antlr4 para python
+## Ejecución:
+``` bash
+python driver.py [nombre de archivo prueba]
+```
+## Integrantes:
+- Sebastián Maldonado
+- Roberto Castillo

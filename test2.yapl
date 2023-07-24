@@ -1,0 +1,3 @@
+class Silly {
+copy() : SELF_TYPE { self };
+};

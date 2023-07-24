@@ -1,0 +1,4 @@
+class Main {
+x : Sally <- (new Sally).copy();
+main() : Sally { x };
+};

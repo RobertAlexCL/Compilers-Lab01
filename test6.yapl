@@ -1,0 +1,40 @@
+class Math {
+    add(a: Int, b: Int): Int {
+        a + b
+    };
+
+    subtract(a: Int, b: Int): Int {
+        a - b
+    };
+};
+
+class AdvancedMath inherits Math {
+    multiply(a: Int, b: Int): Int {
+        a * b
+    };
+
+    divide(a: Int, b: Int): Int {
+        a / b
+    };
+};
+
+class Test {
+    math: AdvancedMath <- new AdvancedMath;
+    result: Int;
+
+    testAdd(): Int {
+        result <- math.add(5, 3)
+    };
+
+    testSubtract(): Int {
+        result <- math.subtract(5, 3)
+    };
+
+    testMultiply(): Int {
+        result <- math.multiply(5, 3)
+    };
+
+    testDivide(): Int {
+        result <- math.divide(5, 3)
+    };
+};
