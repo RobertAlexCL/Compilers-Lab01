@@ -38,3 +38,10 @@ class Test {
         result <- math.divide(5, 3)
     };
 };
+
+class Main {
+	t : Test <- (new Test);
+  	main() : Test {
+  		t
+  	};
+};

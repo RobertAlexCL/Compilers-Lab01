@@ -7,3 +7,10 @@ class StringUtils {
         str1 + str2
     };
 };
+
+class Main {
+	su : StringUtils <- (new StringUtils);
+  	main(): StringUtils {
+    	su
+    };
+};

@@ -1,0 +1,8 @@
+class Sally {
+    copy() : SELF_TYPE { self };
+};
+
+class Main {
+    x : Sally <- (new Sally).copy();
+    main() : Sally { x };
+};

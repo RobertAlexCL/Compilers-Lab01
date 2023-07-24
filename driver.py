@@ -28,11 +28,6 @@ def visualize_tree(node, dot):
 def main(argv):
     input_stream = FileStream(argv[1], encoding='utf-8')
     lexer = YAPLLexer(input_stream)
-
-    token = lexer.nextToken()
-    while token.type != Token.EOF:
-        print(token)
-        token = lexer.nextToken()
     stream = CommonTokenStream(lexer)
     parser = YAPLParser(stream)
     parser.removeErrorListeners()  

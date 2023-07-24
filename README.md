@@ -1,4 +1,4 @@
-# Construcción de Compiladores - Laboratorio 1
+# Construcción de Compiladores - Laboratorio 0
 ## Dependencias:
 - graphviz
 - librería antlr4 para python
