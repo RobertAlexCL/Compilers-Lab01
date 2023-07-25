@@ -120,6 +120,9 @@ class TypeCheckingVisitor(YAPLVisitor):
             self.visitExprWithTwoChildren(ctx)
         elif ctx.NOT():
             self.visitExprWithNot(ctx)
+        elif ctx.getChild(0).getText() == '{':
+            for expre in ctx.expr():
+                self.visitExpr(expre)
         elif ctx.PLUS():  
             return self.visitExprWithAdd(ctx)
         else:

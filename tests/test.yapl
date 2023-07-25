@@ -1,7 +1,0 @@
-class Main {
-  y : Bool;
-  x : Int;
-  main() : Int {
-    y <- not true
-  };
-};
