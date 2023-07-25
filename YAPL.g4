@@ -32,8 +32,7 @@ feature: id '(' (formal (',' formal)* )? ')' ':' TYPE_ID '{' expr '}'
         | id ':' TYPE_ID ('<-' expr)?                                                     
         ;
 formal: id ':' TYPE_ID ;
-expr: id '<-' expr                                                                        
-        | expr ('@' TYPE_ID)? '.'id '(' (expr (',' expr)*)? ')'                           
+expr: expr ('@' TYPE_ID)? '.'id '(' (expr (',' expr)*)? ')'                           
         | id '(' (expr (',' expr)*)? ')'                                                  
         | IF expr THEN expr ELSE expr FI                                                   
         | WHILE expr LOOP expr POOL                                                        
@@ -41,7 +40,7 @@ expr: id '<-' expr
         | 'let' id ':' TYPE_ID ('<-' expr)? (',' id ':' TYPE_ID ('<-' expr)?)* 'in' expr   
         | NEW TYPE_ID                                                                      
         | ISVOID expr                                                                      
-        | expr '+' expr                                                                    
+        | expr '+' expr
         | expr '-' expr                                                                    
         | expr '*' expr                                                                    
         | expr '/' expr                                                                   
@@ -51,6 +50,7 @@ expr: id '<-' expr
         | expr '=' expr                                                                    
         | NOT expr                                                                         
         | '(' expr ')'                                                                     
+        | id '<-' expr 
         | id                                                                               
         | INTEGER                                                                          
         | STRING                                                                           
